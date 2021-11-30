@@ -23,15 +23,12 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.superfences
   - pymdownx.tabbed
-  - toc:
-      permalink: true
 
 extra_css:
   - stylesheets/extra.css
   - https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 nav:
-  - はじめに: index.md
-  - Python: python.md
   - Git: git.md
   - PowerShell: powershell.md
+  - Python: python.md
