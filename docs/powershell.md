@@ -21,11 +21,11 @@ Install-Module oh-my-posh -Scope CurrentUser
 
 === "Microsoft.PowerShell_profile.ps1"
 
-```powershell
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-PoshPrompt -Theme Paradox
-```
+    ```powershell
+    Import-Module posh-git
+    Import-Module oh-my-posh
+    Set-PoshPrompt -Theme Paradox
+    ```
 
 ### フォント
 
@@ -59,15 +59,15 @@ Install-Module -Name PSReadLine -RequiredVersion 2.1.0
 
 === "Microsoft.PowerShell_profile.ps1"
 
-```powershell
-Set-PSReadLineOption -PredictionSource History
-```
+    ```powershell
+    Set-PSReadLineOption -PredictionSource History
+    ```
 
 ## 参照
 
 - [Windows ターミナル Powerline のセットアップ | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/terminal/tutorials/powerline-setup)
 - [PowerShell | Oh My Posh](https://ohmyposh.dev/docs/pwsh)
-- [[PowerShell] Oh my Posh (Powerline) を使って PowerShell コンソールをおしゃれにカスタマイズする | DevelopersIO](https://dev.classmethod.jp/articles/customize-your-powershell-console-with-oh-my-posh3/)
+- [\[PowerShell\] Oh my Posh (Powerline) を使って PowerShell コンソールをおしゃれにカスタマイズする | DevelopersIO](https://dev.classmethod.jp/articles/customize-your-powershell-console-with-oh-my-posh3/)
 - [Windows Terminal で Powerline の環境を整える - ビー鉄のブログ](https://www.beeete2.com/blog/?p=2619)
-- [[PowerShell] PSReadLine 2.1 がリリースされました | DevelopersIO](https://dev.classmethod.jp/articles/powershell-psreadline-21-released/)
+- [\[PowerShell\] PSReadLine 2.1 がリリースされました | DevelopersIO](https://dev.classmethod.jp/articles/powershell-psreadline-21-released/)
 - [PSReadLine について - PowerShell | Microsoft Docs](https://docs.microsoft.com/ja-jp/powershell/module/psreadline/about/about_psreadline?view=powershell-7.1)
