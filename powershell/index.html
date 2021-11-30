@@ -161,30 +161,6 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
-      はじめに
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../python/" class="md-tabs__link">
-      Python
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
     <a href="../git/" class="md-tabs__link">
       Git
     </a>
@@ -201,6 +177,18 @@
   <li class="md-tabs__item">
     <a href="./" class="md-tabs__link md-tabs__link--active">
       PowerShell
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../python/" class="md-tabs__link">
+      Python
     </a>
   </li>
 
@@ -236,36 +224,6 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        はじめに
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../python/" class="md-nav__link">
-        Python
-      </a>
-    </li>
-  
-
     
       
       
@@ -407,6 +365,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -522,24 +495,23 @@
               
                 
                 
-                <h1 id="powershell">PowerShell の設定<a class="headerlink" href="#powershell" title="Permanent link">&para;</a></h1>
+                <h1 id="powershell">PowerShell の設定</h1>
 <p>Windows PowerShell と Windows Terminal の両方で以下のことをする。</p>
 <ul>
 <li>Powerline をセットアップ</li>
 <li>Dracula テーマを適用</li>
 </ul>
-<h2 id="powerline">Powerline をセットアップ<a class="headerlink" href="#powerline" title="Permanent link">&para;</a></h2>
-<h3 id="posh-git-oh-my-posh">Posh-Git と Oh-My-Posh をインストール<a class="headerlink" href="#posh-git-oh-my-posh" title="Permanent link">&para;</a></h3>
+<h2 id="powerline">Powerline をセットアップ</h2>
+<h3 id="posh-git-oh-my-posh">Posh-Git と Oh-My-Posh をインストール</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">posh-git</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
 <span class="nb">Install-Module</span> <span class="n">oh-my-posh</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="_1">プロファイルを編集<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="_1">プロファイルを編集</h3>
 <p><code>~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1</code>に以下のスクリプトを追加する。
 使用できるテーマは<code>Get-PoshThemes</code>から確認可能。</p>
-<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Microsoft.PowerShell_profile.ps1</label><div class="tabbed-content"></div>
-</div>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Microsoft.PowerShell_profile.ps1</label><div class="tabbed-content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">Import-Module</span> <span class="n">posh-git</span>
@@ -547,18 +519,20 @@
 <span class="nb">Set-PoshPrompt</span> <span class="n">-Theme</span> <span class="n">Paradox</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="_2">フォント<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+</div>
+</div>
+<h3 id="_2">フォント</h3>
 <p>Powerline に対応したフォントをインストールする。フォントは 1 種類しか指定できないため、和文も含まれている方が望ましい。
 <a href="https://github.com/yuru7/HackGen">HackGen Console</a>が良さそう。</p>
-<h2 id="dracula">Dracula テーマを適用<a class="headerlink" href="#dracula" title="Permanent link">&para;</a></h2>
+<h2 id="dracula">Dracula テーマを適用</h2>
 <p>Dracula がベストかはわからないが、他に良いものを探すのがめんどくさいので。</p>
-<h3 id="windows-terminal">Windows Terminal<a class="headerlink" href="#windows-terminal" title="Permanent link">&para;</a></h3>
+<h3 id="windows-terminal">Windows Terminal</h3>
 <p>WindowsTerminal の設定から json ファイルを開き、<a href="https://draculatheme.com/windows-terminal">公式の説明</a>にあるスクリプトを追加する。
 ついでにフォントを HackGen Console にしておく。</p>
-<h3 id="windows-powershell">Windows PowerShell<a class="headerlink" href="#windows-powershell" title="Permanent link">&para;</a></h3>
+<h3 id="windows-powershell">Windows PowerShell</h3>
 <p><a href="https://draculatheme.com/powershell">公式の説明</a>通りにやる。
 プロファイルは GitPromptSettings の部分は省いてもよさそう。</p>
-<h2 id="_3">サジェストを有効にする<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">サジェストを有効にする</h2>
 <p>サジェストは PSReabLine 2.1 から使用できる。必要であれば v2.1 以上にアップデートする。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">Get-Module</span> <span class="n">PSReadLine</span><span class="p">).</span><span class="n">Version</span>
@@ -566,12 +540,13 @@
 </code></pre></div>
 </td></tr></table>
 <p>プロファイルに以下を記載することで有効になる。</p>
-<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Microsoft.PowerShell_profile.ps1</label><div class="tabbed-content"></div>
-</div>
+<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Microsoft.PowerShell_profile.ps1</label><div class="tabbed-content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">Set-PSReadLineOption</span> <span class="n">-PredictionSource</span> <span class="nb">History</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="_4">参照<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+</div>
+</div>
+<h2 id="_4">参照</h2>
 <ul>
 <li><a href="https://docs.microsoft.com/ja-jp/windows/terminal/tutorials/powerline-setup">Windows ターミナル Powerline のセットアップ | Microsoft Docs</a></li>
 <li><a href="https://ohmyposh.dev/docs/pwsh">PowerShell | Oh My Posh</a></li>
@@ -613,6 +588,21 @@
           </div>
         </a>
       
+      
+        
+        <a href="../python/" class="md-footer__link md-footer__link--next" aria-label="次: Python" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              Python
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

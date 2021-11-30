@@ -158,30 +158,6 @@
         
   
   
-
-
-  <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
-      はじめに
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../python/" class="md-tabs__link">
-      Python
-    </a>
-  </li>
-
-      
-        
-  
-  
     
   
 
@@ -201,6 +177,18 @@
   <li class="md-tabs__item">
     <a href="../powershell/" class="md-tabs__link">
       PowerShell
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../python/" class="md-tabs__link">
+      Python
     </a>
   </li>
 
@@ -236,36 +224,6 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        はじめに
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../python/" class="md-nav__link">
-        Python
-      </a>
-    </li>
-  
-
     
       
       
@@ -316,6 +274,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#githubssh" class="md-nav__link">
+    GitHubとSSH
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHubとSSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    SSHキーを作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#githubssh_1" class="md-nav__link">
+    GitHubにSSHキーを登録
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    パスフレーズの入力を省略
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    参照
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -334,6 +333,21 @@
     <li class="md-nav__item">
       <a href="../powershell/" class="md-nav__link">
         PowerShell
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
       </a>
     </li>
   
@@ -373,6 +387,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#githubssh" class="md-nav__link">
+    GitHubとSSH
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHubとSSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    SSHキーを作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#githubssh_1" class="md-nav__link">
+    GitHubにSSHキーを登録
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    パスフレーズの入力を省略
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    参照
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -386,9 +441,47 @@
               
                 
                 
-                <h1 id="git-github">Git &amp; GitHub の設定<a class="headerlink" href="#git-github" title="Permanent link">&para;</a></h1>
-<h2 id="git-config-global">git config --global<a class="headerlink" href="#git-config-global" title="Permanent link">&para;</a></h2>
+                <h1 id="git-github">Git &amp; GitHub の設定</h1>
+<h2 id="git-config-global">git config --global</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git config --global user.name <span class="s2">&quot;your_name&quot;</span>
+git config --global user.email <span class="s2">&quot;your_email@example.com&quot;</span>
+git config --global init.defaultbranch main
+</code></pre></div>
+</td></tr></table>
+<h2 id="githubssh">GitHubとSSH</h2>
+<h3 id="ssh">SSHキーを作成</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~/.ssh
+ssh-keygen -t ed25519 -C <span class="s2">&quot;your_email@example.com&quot;</span>
+</code></pre></div>
+</td></tr></table>
+<p>passphraseも入力しておくとよい</p>
+<h3 id="githubssh_1">GitHubにSSHキーを登録</h3>
+<p><code>~/.ssh/id_ed25519.pub</code>の中身をGitHubに登録する</p>
+<h3 id="_1">パスフレーズの入力を省略</h3>
+<p>以下はmacのみ</p>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">~/.ssh/config</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Host github.com
+HostName github.com
+IdentityFile ~/.ssh/id_ed25519
+User git
+UseKeychain yes
+AddKeysToAgent yes
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
 <!-- セットアップスクリプトを用意したい -->
+
+<h2 id="_2">参照</h2>
+<p><a href="https://zenn.dev/dev_kenta/articles/github-ssh-change">【2021年8月13日まで】Githubでssh認証に切り替える方法</a></p>
                 
               
               
@@ -406,21 +499,6 @@
 <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="フッター">
-      
-        
-        <a href="../python/" class="md-footer__link md-footer__link--prev" aria-label="前: Python" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                前
-              </span>
-              Python
-            </div>
-          </div>
-        </a>
       
       
         
