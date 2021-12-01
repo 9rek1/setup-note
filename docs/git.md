@@ -1,4 +1,6 @@
-# Git & GitHub の設定
+# Git & GitHub
+
+!!! warning "2021年12月の情報です。"
 
 ## git config --global
 
@@ -42,4 +44,4 @@ passphraseも入力しておくとよい
 
 ## 参照
 
-[【2021年8月13日まで】Githubでssh認証に切り替える方法](https://zenn.dev/dev_kenta/articles/github-ssh-change)
+- [【2021年8月13日まで】Githubでssh認証に切り替える方法](https://zenn.dev/dev_kenta/articles/github-ssh-change)

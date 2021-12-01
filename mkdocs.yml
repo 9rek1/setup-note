@@ -29,6 +29,9 @@ extra_css:
   - https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 nav:
+  - Homebrew: homebrew.md
   - Git: git.md
   - PowerShell: powershell.md
   - Python: python.md
+  - Node.js: node.md
+  - AtCoder: atcoder.md

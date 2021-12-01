@@ -1,13 +1,17 @@
-# PowerShell の設定
+# PowerShell
 
-Windows PowerShell と Windows Terminal の両方で以下のことをする。
+!!! warning "2021年9月の情報です。"
 
-- Powerline をセットアップ
-- Dracula テーマを適用
+## 概要
 
-## Powerline をセットアップ
+Windows PowerShellとWindows Terminalの両方で以下のことをする。
 
-### Posh-Git と Oh-My-Posh をインストール
+- Powerlineをセットアップ
+- Draculaテーマを適用
+
+## Powerlineをセットアップ
+
+### Posh-GitとOh-My-Poshをインストール
 
 ```powershell
 Install-Module posh-git -Scope CurrentUser
@@ -29,26 +33,26 @@ Install-Module oh-my-posh -Scope CurrentUser
 
 ### フォント
 
-Powerline に対応したフォントをインストールする。フォントは 1 種類しか指定できないため、和文も含まれている方が望ましい。
+Powerlineに対応したフォントをインストールする。フォントは1種類しか指定できないため、和文も含まれている方が望ましい。
 [HackGen Console](https://github.com/yuru7/HackGen)が良さそう。
 
-## Dracula テーマを適用
+## Draculaテーマを適用
 
-Dracula がベストかはわからないが、他に良いものを探すのがめんどくさいので。
+Draculaがベストかはわからないが、他に良いものを探すのがめんどくさいので。
 
 ### Windows Terminal
 
-WindowsTerminal の設定から json ファイルを開き、[公式の説明](https://draculatheme.com/windows-terminal)にあるスクリプトを追加する。
-ついでにフォントを HackGen Console にしておく。
+Windows Terminalの設定からjsonファイルを開き、[公式の説明](https://draculatheme.com/windows-terminal)にあるスクリプトを追加する。
+ついでにフォントをHackGen Consoleにしておく。
 
 ### Windows PowerShell
 
 [公式の説明](https://draculatheme.com/powershell)通りにやる。
-プロファイルは GitPromptSettings の部分は省いてもよさそう。
+プロファイルはGitPromptSettingsの部分は省いてもよさそう。
 
 ## サジェストを有効にする
 
-サジェストは PSReabLine 2.1 から使用できる。必要であれば v2.1 以上にアップデートする。
+サジェストはPSReabLine 2.1から使用できる。必要であればv2.1以上にアップデートする。
 
 ```powershell
 (Get-Module PSReadLine).Version
@@ -65,9 +69,9 @@ Install-Module -Name PSReadLine -RequiredVersion 2.1.0
 
 ## 参照
 
-- [Windows ターミナル Powerline のセットアップ | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/terminal/tutorials/powerline-setup)
-- [PowerShell | Oh My Posh](https://ohmyposh.dev/docs/pwsh)
-- [\[PowerShell\] Oh my Posh (Powerline) を使って PowerShell コンソールをおしゃれにカスタマイズする | DevelopersIO](https://dev.classmethod.jp/articles/customize-your-powershell-console-with-oh-my-posh3/)
-- [Windows Terminal で Powerline の環境を整える - ビー鉄のブログ](https://www.beeete2.com/blog/?p=2619)
-- [\[PowerShell\] PSReadLine 2.1 がリリースされました | DevelopersIO](https://dev.classmethod.jp/articles/powershell-psreadline-21-released/)
-- [PSReadLine について - PowerShell | Microsoft Docs](https://docs.microsoft.com/ja-jp/powershell/module/psreadline/about/about_psreadline?view=powershell-7.1)
+- [Windows ターミナルのカスタム プロンプトのセットアップ \_ Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/terminal/tutorials/powerline-setup)
+- [Windows \_ Oh My Posh](https://ohmyposh.dev/docs/windows)
+- [\[PowerShell\] Oh my Posh (Powerline) を使ってPowerShellコンソールをおしゃれにカスタマイズする \_ DevelopersIO](https://dev.classmethod.jp/articles/customize-your-powershell-console-with-oh-my-posh3/)
+- [Windows TerminalでPowerlineの環境を整える - ビー鉄のブログ](https://www.beeete2.com/blog/?p=2619)
+- [\[PowerShell\] PSReadLine 2.1がリリースされました \_ DevelopersIO](https://dev.classmethod.jp/articles/powershell-psreadline-21-released/)
+- [PSReadLine について - PowerShell \_ Microsoft Docs](https://docs.microsoft.com/ja-jp/powershell/module/psreadline/about/about_psreadline?view=powershell-7.1)
